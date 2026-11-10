@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Snake Game - Arcade Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="interfaz-juego">
+        <!-- Marcadores Claros -->
+        <div class="seccion-marcadores">
+            <div class="caja-marcador puntos">
+                <span class="etiqueta">PUNTOS</span>
+                <span id="marcador">0</span>
+            </div>
+            <div class="caja-marcador frutas">
+                <span class="etiqueta">FRUTAS</span>
+                <span id="marcadorFrutas">0</span>
+            </div>
+            <div class="caja-marcador nivel">
+                <span class="etiqueta text-success fw-bold">NIVEL</span>
+                <span id="marcadorNivel" class="text-success fw-bold">1</span>
+            </div>
+            <div class="caja-marcador record">
+                <span class="etiqueta">RÉCORD</span>
+                <span id="marcadorMaximo">0</span>
+            </div>
+        </div>
+
+        <!-- Área del Canvas -->
+        <div class="contenedor-canvas">
+            <canvas id="lienzoJuego" width="560" height="560"></canvas>
+        </div>
+
+        <!-- Controles Táctiles (D-Pad para celulares) -->
+        <div class="controles-tactiles" id="controlesTactiles">
+            <div class="pad-cruz">
+                <button type="button" class="btn-pad pad-arriba" data-dir="arrowup" aria-label="Arriba">▲</button>
+                <div class="fila-pad-horizontal">
+                    <button type="button" class="btn-pad pad-izquierda" data-dir="arrowleft" aria-label="Izquierda">◀</button>
+                    <div class="pad-centro"></div>
+                    <button type="button" class="btn-pad pad-derecha" data-dir="arrowright" aria-label="Derecha">▶</button>
+                </div>
+                <button type="button" class="btn-pad pad-abajo" data-dir="arrowdown" aria-label="Abajo">▼</button>
+            </div>
+        </div>
+
+        <!-- Botón y Leyendas -->
+        <div class="seccion-controles">
+            <button id="btnPausa">Pausar Juego</button>
+            <p class="instrucciones">
+                El juego comienza en pausa. Presiona una dirección, toca un botón o desliza para empezar.<br>
+                Muévete con <span>W/A/S/D</span>, las <span>flechas</span>, <span>deslizando</span> o los botones táctiles.<br>
+                Las uvas valen 10 puntos y cada fruta nueva suma 5 más. Come 5 frutas para subir de nivel; desde el nivel 2 hay enemigos y obstáculos.<br>
+                Presiona la <span>barra espaciadora</span> o el botón para pausar.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
